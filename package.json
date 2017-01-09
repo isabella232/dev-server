@@ -1,0 +1,29 @@
+{
+  "name": "dev-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy_stage": "node bin/deploy.js --target staging",
+    "start": "concurrently \"supervisor -w app.js app.js\" \"simpless -w -q graphics/**/css/*.less -o graphics/**/css/graphic.css\"",
+    "text": "node bin/text.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.18.6",
+    "concurrently": "^3.1.0",
+    "connect-browser-sync": "^2.0.1",
+    "connect-livereload": "^0.6.0",
+    "express": "^4.14.0",
+    "less": "^2.7.2",
+    "less-middleware": "^2.2.0",
+    "nunjucks": "^3.0.0",
+    "reload": "^1.1.0",
+    "simpless": "^3.1.0",
+    "supervisor": "^0.12.0",
+    "tiny-lr": "^1.0.3",
+    "xlsx": "^0.8.1"
+  }
+}
